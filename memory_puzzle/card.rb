@@ -16,8 +16,8 @@ class Card
         @face_up = false
     end
 
-    def ==(other_card_value) # card instance's value attribute
-        @face_value == other_card_value # self.face_value == other_card.face_value
+    def ==(other_card) # card instance's value attribute
+        @face_value == other_card.face_value # self.face_value == other_card.face_value
 
     end
 

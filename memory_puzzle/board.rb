@@ -1,6 +1,8 @@
 require_relative "card.rb"
 
 class Board
+    attr_reader :grid
+
     @@alpha = ("A".."Z").to_a
 
     def self.get_symbols(num)
