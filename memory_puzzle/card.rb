@@ -1,18 +1,23 @@
 class Card
-    attr_reader :face_value, :card_state
+    attr_reader :face_value, :face_up
 
-    def initialize(face_value, card_state) #String, boolean
+    def initialize(face_value) #String
         @face_value = face_value
-        @card_state = card_state
+        @face_up = false
     end
 
-    def face_up
-        if @card_state == true
-            puts "The value is #{@face_value}" 
-            return true
-        end
-        false
+    def reveal
+        @face_up = true
+        puts "The value is #{@face_value}"
+        return @face_value
     end
 
+    def hide
+        @face_up = false
+    end
+
+    def ==(other_card_value) # card instance's value attribute
+        @face_value == other_card_value # self.face_value == other_card.face_value
+    end
 
 end
