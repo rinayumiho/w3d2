@@ -18,6 +18,7 @@ class Card
 
     def ==(other_card_value) # card instance's value attribute
         @face_value == other_card_value # self.face_value == other_card.face_value
+
     end
 
 end

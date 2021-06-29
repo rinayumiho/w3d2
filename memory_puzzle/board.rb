@@ -44,4 +44,18 @@ class Board
         end
     end
 
+    def won?
+        @grid.all? do |row|
+            row.all? { |card| card.face_up }
+        end
+    end
+
+    def reveal(guessed_pos)
+        #guessed_pos = [i, j]
+        i, j = guessed_pos
+        if @grid[i][j].face_up
+            return @grid[i][j].reveal
+        end
+    end
+
 end
